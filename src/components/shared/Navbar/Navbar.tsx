@@ -14,13 +14,13 @@ const Navbar = () => {
             </span>
           </div>
           <div className="">
-            <Link href='/sign-in' className="mr-6 font-bold">
+            <Link href='/sign-in' className="mr-6 font-bold uppercase">
                 Sign In
             </Link>
             <ButtonPrimary
               link="/sign-up"
               text="Sign Up"
-              classes="bg-black text-white hover:bg-slate-800"
+              classes="bg-black text-white hover:bg-gray-900 uppercase"
             />
           </div>
         </div>
