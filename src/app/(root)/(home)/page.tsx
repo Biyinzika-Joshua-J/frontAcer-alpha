@@ -1,8 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
+import { fetchQuestions } from "@/lib/actions/Quiz/fetchQuestions.action";
+import Test from "@/components/Test";
 
-const page = () => {
+const Home = () => {
+
+  
+ 
   return (
     <main className="py-10">
       <section className="mx-auto md:w-[80%] w-[90%] ">
@@ -72,8 +77,11 @@ const page = () => {
             </div>
         </div>
       </section>
+
+     <Test/>
+
     </main>
   );
 };
 
-export default page;
+export default Home;
