@@ -6,7 +6,7 @@ import Theme from "./Theme";
 
 const DashboardNavbar = () => {
   return (
-    <nav className="">
+    <nav className=" shadow-lg fixed z-50 w-full bg-white">
       <div className="w-[95%] mx-auto flex items-center justify-between py-6">
         <div className="">
           <span className="text-3xl ">
