@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonPrimary from "../buttons/ButtonPrimary";
 import Link from "next/link";
+import { SignedIn, UserButton, SignedOut } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -13,16 +14,31 @@ const Navbar = () => {
               <span className="font-extrabold text-primary-main">Acer</span>
             </span>
           </div>
-          <div className="">
-            <Link href='/sign-in' className="mr-6 font-bold uppercase">
+          <SignedOut>
+            <div className="">
+              <Link href="/sign-in" className="mr-6 font-bold uppercase">
                 Sign In
-            </Link>
-            <ButtonPrimary
-              link="/sign-up"
-              text="Sign Up"
-              classes="bg-black text-white hover:bg-gray-900 uppercase"
+              </Link>
+              <ButtonPrimary
+                link="/sign-up"
+                text="Sign Up"
+                classes="bg-black text-white hover:bg-gray-900 uppercase"
+              />
+            </div>
+          </SignedOut>
+          <SignedIn>
+            <UserButton
+              afterSignOutUrl="/"
+              appearance={{
+                elements: {
+                  avatarBox: "h-10 w-10",
+                },
+                variables: {
+                  colorPrimary: "#ff7000",
+                },
+              }}
             />
-          </div>
+          </SignedIn>
         </div>
       </div>
       <hr className="h-[1px] w-full bg-black" />

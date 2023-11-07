@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
-import { fetchQuestions } from "@/lib/actions/Quiz/fetchQuestions.action";
-import Test from "@/components/Test";
+
 
 const Home = () => {
 
@@ -78,7 +77,6 @@ const Home = () => {
         </div>
       </section>
 
-     <Test/>
 
     </main>
   );
