@@ -51,8 +51,8 @@ const LeftSidebar = () => {
       <div className="pt-10">
       <SignedIn>
           <div className="flex flex-col gap-3">
-              <Link href={'/learn'}>
-                  <button  className="flex items-center  gap-4 p-4 small-medium btn-tertiary text-dark400_light900 light-border-2 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
+              <Link href={'/learn/profile'}>
+                  <button  className="bg-primary-main text-white flex items-center  gap-4 p-4 small-medium btn-tertiary text-dark400_light900 light-border-2 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
                   {/*<Image
                     src={'/assets/icons/sign-up.svg'}
                     alt="sign up icon"
@@ -69,7 +69,7 @@ const LeftSidebar = () => {
           
               
                 <SignOutButton>
-                  <button  className="flex items-center  gap-4 p-4 small-medium btn-tertiary text-dark400_light900 light-border-2 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
+                  <button  className="bg-gray-500 text-white flex items-center  gap-4 p-4 small-medium btn-tertiary text-dark400_light900 light-border-2 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none ">
                   {/*<Image
                     src={'/assets/icons/sign-up.svg'}
                     alt="sign up icon"
