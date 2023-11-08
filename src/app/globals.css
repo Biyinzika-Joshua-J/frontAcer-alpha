@@ -74,3 +74,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+.profile-bg__image{
+  background-image: url('https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.profile-image{
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+ 
+}
