@@ -24,6 +24,45 @@ const files = {
 const UIChallengesEditor = () => {
   const [fileName, setFileName] = useState("script.js");
   const file = files[fileName];
+  const [html, setHtml] = useState('');
+  const [css, setCss] = useState('');
+  const [js, setJs] = useState('');
+  const [setsrcDoc, setSrcDoc] = useState('');
+
+
+
+  function handleEditorChange(value, event){
+    if (file.name === "index.html"){
+        setHtml(value);
+    }else if(file.name === "style.css"){
+        setCss(value)
+    }else if (file.name === "script.js"){
+        setJs(value)
+    }
+  }
+
+  useEffect(()=>{
+
+    const timeout = setTimeout(()=>{
+        setSrcDoc(` <html>
+        <head>
+            <style>
+                ${css}
+            </style>
+        </head>
+        <body>
+            ${html}
+        </body>
+        <script>
+            ${js}
+        </script>
+    </html>`)
+    }, 250);
+
+    return ()=>clearInterval(timeout);
+    
+
+  }, [html, css, js]);
 
   return (
     <div className={`flex flex-col h-full `}>
@@ -62,6 +101,7 @@ const UIChallengesEditor = () => {
           defaultLanguage={file.language}
           defaultValue={file.value}
           className="flex-1 "
+          onChange={handleEditorChange}
         />
       </div>
       <div className=" editor-ui__savebtn flex-1 bg-[#303134]">
