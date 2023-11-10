@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Editor from "@monaco-editor/react";
 import { Button } from "@/components/ui/button";
+import { useUIEditorContext } from "@/context/UIEditorProvider";
+
 
 const files = {
   "script.js": {
@@ -28,6 +30,7 @@ const UIChallengesEditor = () => {
   const [css, setCss] = useState('');
   const [js, setJs] = useState('');
   const [setsrcDoc, setSrcDoc] = useState('');
+  const {setSrcDocumentUI} = useUIEditorContext();
 
 
 
@@ -57,6 +60,19 @@ const UIChallengesEditor = () => {
             ${js}
         </script>
     </html>`)
+    setSrcDocumentUI(` <html>
+    <head>
+        <style>
+            ${css}
+        </style>
+    </head>
+    <body>
+        ${html}
+    </body>
+    <script>
+        ${js}
+    </script>
+</html>`)
     }, 250);
 
     return ()=>clearInterval(timeout);

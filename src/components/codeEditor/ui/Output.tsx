@@ -1,6 +1,6 @@
 import React from "react";
 
-const Output = ({ html, css, javascript }) => {
+const Output = ({ html, css, javascript, srcDocument }) => {
   const srcDoc = `
     <html>
         <head>
@@ -17,9 +17,9 @@ const Output = ({ html, css, javascript }) => {
     </html>
   `;
   return (
-    <div>
+    <div className=" h-full">
       <iframe
-        srcDoc={srcDoc}
+        srcDoc={srcDocument}
         frameborder="0"
         height={"100%"}
         width={"100%"}

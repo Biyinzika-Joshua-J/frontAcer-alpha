@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Output from "./Output";
+import { useUIEditorContext } from "@/context/UIEditorProvider";
 
 const tabBtnText = ["Description", "Hints", "Output", "Demo", "Solution"];
 
 const Content = () => {
   const [activeContentTab, setActiveContentTab] = useState(0);
+  const {srcDocument} = useUIEditorContext();
   return (
     <div className="mr-2 flex flex-col ">
       <div className="h-[50px] border-b-[0px] bg-[#A9A9A9] border-[#303134] w-full ">
@@ -24,7 +26,7 @@ const Content = () => {
       <div className="h-[75vh]  overflow-y-auto overflow-hidden py-6 custom-scrollbar px-4">
         {activeContentTab === 0 && <p>Description</p>}
         {activeContentTab === 1 && <p>Hints!</p>}
-        {activeContentTab === 2 && <Output html={'<h1>Heading</h1>'} css={''} javascript={''}/>}
+        {activeContentTab === 2 && <Output srcDocument={srcDocument} html={''} css={''} javascript={''}/>}
         {activeContentTab === 3 && <p>Demo!</p>}
         {activeContentTab === 4 && <p>Solution</p>}
       </div>
