@@ -6,12 +6,12 @@ import LeftSidebar from "@/components/shared/Sidebars/LeftSidebar";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="flex flex-col min-h-[100vh]">
-      <DashboardNavbar/>
-      <div className="flex">
+      
+      <div className="">
          
 
-            <section className="flex min-h-screen flex-1  pt-36 ">
-                <div className="">
+            <section className="  ">
+                <div className=" flex flex-col ">
                 {children}
                 </div>
             </section>

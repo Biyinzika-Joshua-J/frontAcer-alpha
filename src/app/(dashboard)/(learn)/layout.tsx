@@ -6,7 +6,7 @@ import LeftSidebar from "@/components/shared/Sidebars/LeftSidebar";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="flex flex-col min-h-[100vh]">
-      <DashboardNavbar/>
+      <DashboardNavbar isFixed={true}/>
       <div className="flex">
             <LeftSidebar/>
 

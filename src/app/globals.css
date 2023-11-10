@@ -88,5 +88,11 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
- 
+}
+
+.editor-ui__filebtns{
+  flex: 0 0 50px; 
+}
+.editor-ui__savebtn{
+  flex: 0 0 50px; 
 }
