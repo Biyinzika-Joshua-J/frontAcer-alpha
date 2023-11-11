@@ -8,7 +8,7 @@ interface ContextType {
 
 const Context = createContext<ContextType | undefined>(undefined);
 
-const UIEditorProvider = ({children}) => {
+const UIEditorProvider = ({children}:{React.ReactNode}) => {
     const [srcDocument, setSrcDocument] = useState('');
 
     function setSrcDocumentUI(doc:string){
@@ -28,7 +28,7 @@ const UIEditorProvider = ({children}) => {
 export function useUIEditorContext() {
     const context = useContext(Context);
     if (context === undefined) {
-      throw new Error("useTheme must be used within a ThemeProvider");
+      throw new Error("useUIEditorContext must be used within a ContextProvider");
     }
     return context;
   }

@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+// is an interface between my code and the database
 
 let prisma: PrismaClient;
 
