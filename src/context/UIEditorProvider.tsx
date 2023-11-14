@@ -1,5 +1,5 @@
 "use client"
-import React, {useState, useEffect, useContext, createContext} from 'react'
+import React, {useState, useEffect, useContext, createContext} from 'react';
 
 interface ContextType {
     srcDocument: string;
@@ -8,7 +8,7 @@ interface ContextType {
 
 const Context = createContext<ContextType | undefined>(undefined);
 
-const UIEditorProvider = ({children}:{React.ReactNode}) => {
+const UIEditorProvider = ({children}:{children:React.ReactNode}) => {
     const [srcDocument, setSrcDocument] = useState('');
 
     function setSrcDocumentUI(doc:string){

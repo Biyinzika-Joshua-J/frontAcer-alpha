@@ -4,9 +4,12 @@ import UIChallengesEditor from "@/components/codeEditor/ui/Editor";
 import DashboardNavbar from "@/components/shared/Navbar/DashboardNavbar";
 import Content from "@/components/codeEditor/ui/Content";
 import UIEditorProvider from "@/context/UIEditorProvider";
+import { useClerk } from "@clerk/nextjs";
 // {TODO: Add monaco editor and coding workspace}
 
-const page = () => {
+const Page = () => {
+  const {loaded:isClerkLoaded} = useClerk();
+  
   return (
     <div className="min-h-[100vh] flex flex-col">
       <DashboardNavbar isFixed={false} />
@@ -16,7 +19,7 @@ const page = () => {
             <Content />
           </div>
           <div className="w-[50vw] flex flex-col flex-1">
-            <UIChallengesEditor />
+            {isClerkLoaded && <UIChallengesEditor />}
           </div>
         </div>
       </UIEditorProvider>
@@ -24,4 +27,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
