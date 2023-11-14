@@ -29,7 +29,7 @@ const LeftSidebar = () => {
           return (
             <>
               <Link
-                key={link.route}
+                key={idx}
                 href={link.route}
                 className={`${
                   isActive

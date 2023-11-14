@@ -1,15 +1,13 @@
-"use client";
-import React from "react";
-import UIChallengesEditor from "@/components/codeEditor/ui/Editor";
-import DashboardNavbar from "@/components/shared/Navbar/DashboardNavbar";
+"use client"
+import UIChallengesEditor from '@/components/codeEditor/ui/Editor'
+import DashboardNavbar from '@/components/shared/Navbar/DashboardNavbar'
+import UIEditorProvider from '@/context/UIEditorProvider'
+import { useClerk } from '@clerk/nextjs'
 import Content from "@/components/codeEditor/ui/Content";
-import UIEditorProvider from "@/context/UIEditorProvider";
-import { useClerk } from "@clerk/nextjs";
-// {TODO: Add monaco editor and coding workspace}
+import React from 'react'
 
 const Page = () => {
-  const { loaded: isClerkLoaded } = useClerk();
-
+    const { loaded: isClerkLoaded } = useClerk();
   return (
     <div className="min-h-[100vh] flex flex-col">
       <DashboardNavbar isFixed={false} />
@@ -25,7 +23,7 @@ const Page = () => {
         </div>
       </UIEditorProvider>
     </div>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
