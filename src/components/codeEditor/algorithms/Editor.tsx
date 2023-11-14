@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Editor from "@monaco-editor/react";
 import { Button } from "@/components/ui/button";
 import { useUIEditorContext } from "@/context/UIEditorProvider";
+import { DropdownMenuCheckboxes } from "@/components/codeEditor/algorithms/dropdown/MenuDropdown";
 
 
 const files = {
@@ -29,11 +30,9 @@ const AlgorithmsEditor = () => {
 
 
 
-  function handleEditorChange(value, event){
-    if (file.name === "index.html"){
-        setHtml(value);
-    }else if(file.name === "style.css"){
-        setCss(value)
+  function handleEditorChange(value:any){
+    if (file.name === "main.py"){
+        setPython(value);
     }else if (file.name === "script.js"){
         setJs(value)
     }
@@ -54,23 +53,7 @@ const AlgorithmsEditor = () => {
     <div className={`flex flex-col h-full `}>
       <div className=" editor-ui__filebtns bg-[#303134]">
         <div className="flex items-center  h-full">
-        
-        
-          <Button
-            disabled={fileName === "main.py"}
-            onClick={() => setFileName("main.py")}
-            className={` rounded-none cursor-pointer ${fileName === "main.py" && 'border-b-2 border-white'}`}
-          >
-            main.py
-          </Button>
-          <Button
-            disabled={fileName === "main.js"}
-            onClick={() => setFileName("main.js")}
-            className={` rounded-none cursor-pointer ${fileName === "main.js" && 'border-b-2 border-white'}`}
-          >
-            script.js
-          </Button>
-        
+          <DropdownMenuCheckboxes setFileName={setFileName}/>
         </div>
       </div>
       <div className="flex-1">
@@ -87,7 +70,13 @@ const AlgorithmsEditor = () => {
       <div className=" editor-ui__savebtn flex-1 bg-[#303134]">
         <div className="flex items-center  h-full">
             <Button className="bg-primary-main text-white">
-                Save
+                Console
+            </Button>
+            <Button className="bg-primary-main text-white">
+                Run
+            </Button>
+            <Button className="bg-primary-main text-white">
+                Submit
             </Button>
         </div>
       </div>

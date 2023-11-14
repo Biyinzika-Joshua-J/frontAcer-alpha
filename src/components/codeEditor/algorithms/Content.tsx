@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useUIEditorContext } from "@/context/UIEditorProvider";
 
-const tabBtnText = ["Description", "Hints", "Output", "Demo", "Solution"];
+const tabBtnText = ["Description", "Hints", "Solution", "Submission"];
 
 const Content = () => {
   const [activeContentTab, setActiveContentTab] = useState(0);
@@ -25,9 +25,8 @@ const Content = () => {
       <div className="h-[75vh]  overflow-y-auto overflow-hidden py-6 custom-scrollbar px-4">
         {activeContentTab === 0 && <p>Description Algos</p>}
         {activeContentTab === 1 && <p>Hints!</p>}
-        {activeContentTab === 2 && <p>Output</p>}
-        {activeContentTab === 3 && <p>Demo!</p>}
-        {activeContentTab === 4 && <p>Solution</p>}
+        {activeContentTab === 2 && <p>Solution</p>}
+        {activeContentTab === 3 && <p>Submissions</p>}
       </div>
     </div>
   );
