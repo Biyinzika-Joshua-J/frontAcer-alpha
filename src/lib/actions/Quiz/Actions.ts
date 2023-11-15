@@ -3,11 +3,7 @@ import prisma from "@/lib/prisma"
 import { QuizQuestionTypes } from "@/types/quiz";
 import { NextResponse } from "next/server";
 
-export const fetchQuestions = async () =>{
-    const quizs = await prisma.quiz.findMany();
-    return quizs;
-}
-
+// Create actions
 export const saveQuizQuestion = async (quizQuestion: QuizQuestionTypes) => {
     try {
         const quiz = await prisma.quiz.create({
@@ -23,9 +19,22 @@ export const saveQuizQuestion = async (quizQuestion: QuizQuestionTypes) => {
                 topic : quizQuestion.topic,
             }
         })
-    
+        
         return NextResponse.json({message:"Question created!", created: true})
     } catch (error) {
         return NextResponse.json({message:"Error!", created: false})
     }
 }
+
+// Read actions
+export const fetchQuestions = async () =>{
+    const quizs = await prisma.quiz.findMany();
+    return quizs;
+}
+
+// Update actions
+
+
+// Delete actions
+
+

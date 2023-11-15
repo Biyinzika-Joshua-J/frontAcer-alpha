@@ -4,15 +4,15 @@ import { Button } from '@/components/ui/button';
 import { saveQuizQuestion } from '@/lib/actions/Quiz/Actions';
 
 const Page = () => {
-  const [question, setQuestion] = useState('');
-  const [category, setCategory] = useState('');
-  const [topic, setTopic] = useState('');
-  const [option1, setOption1] = useState('');
-  const [option2, setOption2] = useState('');
-  const [option3, setOption3] = useState('');
-  const [option4, setOption4] = useState('');
-  const [explanation, setExplanation] = useState('');
-  const [answer, setAnswer] = useState('');
+  const [question, setQuestion] = useState('what is css?');
+  const [category, setCategory] = useState('css');
+  const [topic, setTopic] = useState('Intro');
+  const [option1, setOption1] = useState('A programming language');
+  const [option2, setOption2] = useState('A markup langauge');
+  const [option3, setOption3] = useState('A styling langauge');
+  const [option4, setOption4] = useState('A script langauge');
+  const [explanation, setExplanation] = useState('Explanation of what is css here');
+  const [answer, setAnswer] = useState('3');
 
 
   async function saveQuestion(){
