@@ -1,17 +1,15 @@
 import React from 'react'
-import QuizQuestion from './QuizQuestion'
-import QuizOptions from './QuizOptions'
 import QuizAnswerExplanation from './QuizAnswerExplanation'
+import QuizComp from './Quiz'
 
 const QuizQuestionsContainer = () => {
   return (
     <div>
         <div>
-        <QuizQuestion/>
-        <QuizOptions/>
+        <QuizComp/>
         </div>
         <div>
-            <QuizAnswerExplanation/>
+            {/*<QuizAnswerExplanation/>*/}
         </div>
     </div>
   )

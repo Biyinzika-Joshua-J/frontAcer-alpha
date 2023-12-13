@@ -17,6 +17,7 @@ export const saveQuizQuestion = async (quizQuestion: QuizQuestionTypes) => {
                 explanation : quizQuestion.explanation,
                 category : quizQuestion.category,
                 topic : quizQuestion.topic,
+                //TODO: add difficulty prop
             }
         })
         
