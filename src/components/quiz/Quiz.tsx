@@ -8,6 +8,7 @@ import CodeSnippet from './CodeSnippet';
 import QuizQuestion from './QuizQuestion';
 import QuizOptions from './QuizOptions';
 import QuizAnswerExplanation from './QuizAnswerExplanation';
+import QuizNavigationButtons from './QuizNavigationButtons';
 
 const QuizComp = () => {
 
@@ -20,6 +21,7 @@ const QuizComp = () => {
       <QuizQuestion/>
       <CodeSnippet/>
       <QuizOptions/>
+      <QuizNavigationButtons/>
       <QuizAnswerExplanation/>
     </div>
   )

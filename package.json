@@ -19,6 +19,7 @@
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-progress": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
     "@types/node": "20.8.7",
     "@types/prismjs": "^1.26.3",
     "@types/react": "18.2.31",
