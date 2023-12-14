@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from '../ui/button'
 import { faCircleXmark, faClock } from '@fortawesome/free-solid-svg-icons';
+import QuizTimer from './QuizTimer';
 
 const QuizHeader = () => {
   return (
@@ -14,10 +15,11 @@ const QuizHeader = () => {
             </div>
             <div className="">
                 <div className="flex items-center">
-                    <div className="">
+                    {/*<div className="">
                         <FontAwesomeIcon icon={faClock} className='text-gray-400' size='2x'/>
                     </div>
-                    <span className="ml-4">20:00</span>
+  <span className="ml-4">20:00</span>*/}
+                    <QuizTimer/>
                 </div>
             </div>
             <div className="">
